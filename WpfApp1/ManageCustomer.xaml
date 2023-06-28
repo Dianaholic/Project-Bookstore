@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfApp1.ManageCustomer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="ManageCustomer" Height="450" Width="800">
+    <Grid>
+        <Label Content="Manage Customer&#xD;&#xA;" Margin="0,44,0,304" Grid.Row="0" HorizontalAlignment="Center" FontFamily="Arial Rounded MT Bold" FontSize="25"/>
+        <Label Content="Sirirak Books" Margin="0,71,0,284" Grid.Row="0" HorizontalAlignment="Center" FontFamily="Arial Rounded MT Bold" FontSize="15" Foreground="#FFFF7704"/>
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" Margin="18,147,18,20" FontFamily="Arial Rounded MT Bold" SelectionChanged="dataGrid_SelectionChanged" FontSize="14" HeadersVisibility="Column" GridLinesVisibility="None" RowHeaderWidth="0">
+            <!-- คอลัมน์ข้อมูล -->
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="CustomerID" Binding="{Binding Customer_ID}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="CustomerName" Binding="{Binding Customer_Name}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Address" Binding="{Binding Customer_Address}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Customer_Email}" Width="*" IsReadOnly="True"/>
+
+                <!-- คอลัมน์ Edit Button -->
+                <DataGridTemplateColumn Header="Edit" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Edit" Click="EditButton_Click" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <!-- คอลัมน์ Delete Button -->
+                <DataGridTemplateColumn Header="Delete" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Delete" Click="DeleteButton_Click" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Add Customer" Margin="651,115,0,0" Click="btnCustomers_Click" HorizontalAlignment="Left" Width="112" Height="27" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfApp1.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <Label Content="Buying Books" Margin="0,44,0,304" Grid.Row="0" HorizontalAlignment="Center" FontFamily="Arial Rounded MT Bold" FontSize="25"/>
+        <Label Content="Sirirak Books" Margin="0,71,0,284" Grid.Row="0" HorizontalAlignment="Center" FontFamily="Arial Rounded MT Bold" FontSize="15" Foreground="#FFFF7704"/>
+        <TextBox x:Name="txtTitle" Margin="297,122,0,0" HorizontalAlignment="Left" Width="230" Height="27" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+        <TextBox x:Name="txtDescription" Margin="297,153,0,0" HorizontalAlignment="Left" Width="230" Height="27" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+        <TextBox x:Name="txtPrice" Margin="297,185,0,0" HorizontalAlignment="Left" Width="230" Height="27" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+        <Button Content="Buying" Margin="297,248,0,0" Click="btnCreate_Click" HorizontalAlignment="Left" Width="230" Height="27" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+        <Label Content="Title" Margin="260,126,0,254" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" FontFamily="Arial Rounded MT Bold" FontSize="10"/>
+        <Label Margin="229,226,0,154" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" FontFamily="Arial Rounded MT Bold" FontSize="10"/>
+        <Label Content="Description" Margin="227,158,0,222" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" FontFamily="Arial Rounded MT Bold" FontSize="10"/>
+        <Label Content="Price&#xA;" Margin="254,191,0,189" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" FontFamily="Arial Rounded MT Bold" FontSize="10"/>
+        <TextBox x:Name="txtAmount" Margin="297,216,0,0" HorizontalAlignment="Left" Width="230" Height="27" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+        <Label Content="Amount&#xA;" Margin="244,221,0,159" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" FontFamily="Arial Rounded MT Bold" FontSize="10"/>
+
+    </Grid>
+</Window>

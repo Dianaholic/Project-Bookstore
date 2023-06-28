@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApp1.OrderBook"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="OrderBook" Height="450" Width="800">
+    <Grid>
+        <Label Content="Buying Books" Margin="0,44,0,304" Grid.Row="0" HorizontalAlignment="Center" FontFamily="Arial Rounded MT Bold" FontSize="25"/>
+        <Label Content="Sirirak Books" Margin="0,71,0,284" Grid.Row="0" HorizontalAlignment="Center" FontFamily="Arial Rounded MT Bold" FontSize="15" Foreground="#FFFF7704"/>
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" Margin="18,147,18,20" FontFamily="Arial Rounded MT Bold" SelectionChanged="dataGrid_SelectionChanged" FontSize="14" HeadersVisibility="Column" GridLinesVisibility="None" RowHeaderWidth="0">
+            <!-- คอลัมน์ข้อมูล -->
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ISBN" Binding="{Binding ISBN}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="*" IsReadOnly="True"/>
+
+                <!-- คอลัมน์ Buy Button -->
+                <DataGridTemplateColumn Header="Buy" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Buy" Click="ButtonBuy_Click" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
